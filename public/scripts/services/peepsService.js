@@ -17,4 +17,10 @@ myApp.service('PeepsService', function($http) {
       sv.allMyPeeps = response;
     });
   };
+  sv.deletePeep = function(peep) {
+    console.log('in service thing', peep);
+    return $http.delete('/peeps', peep).then(function(response) {
+      console.log(response);
+    });
+  };
 });

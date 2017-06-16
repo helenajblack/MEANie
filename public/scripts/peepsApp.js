@@ -17,4 +17,8 @@ myApp.controller('WhereMyPeeps', function($http, PeepsService) {
       vm.peeps = PeepsService.allMyPeeps.data;
     });
   }; //end whereMyPeepsAt
+  vm.deleteAPeep = function(peep) {
+    console.log("deleted", this);
+    PeepsService.deletePeep(peep);
+  };
 }); // end controller

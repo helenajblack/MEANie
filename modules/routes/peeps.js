@@ -35,4 +35,9 @@ router.post('/', function(req, res) {
   newRecord.save();
 });
 
+router.delete('/', function(req, res) {
+  console.log(req.body);
+  res.send('received at server');
+});
+
 module.exports = router;

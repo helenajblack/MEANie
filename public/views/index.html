@@ -28,6 +28,7 @@
         <tr ng-repeat="peep in wmp.peeps">
           <td>{{peep.name}}</td>
           <td>{{peep.location}}</td>
+          <td><button ng-click="wmp.deleteAPeep(peep)" type="button" name="button">Delete</button></td>
         </tr>
       </table>
     </div>
